@@ -17,6 +17,13 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=BlackOpsOne:wght@400;700&display=swap" rel="stylesheet"/>
       </head>
       <body className={inter.className}>
+        <div className="flex justify-center p-3">
+          v2.0 is still developing-
+          <Link href="https://sneakers-adda.vercel.app" className="text-blue-500 hover:text-blue-700 underline cursor-pointer">
+          Check out my previous version!
+          </Link>
+
+        </div>
         <div className="flex flex-col sm:flex-row items-center justify-center space-x-0 sm:space-x-4 space-y-4 sm:space-y-0 p-4 border">
           {/* Logo on the left */}
           <div className="w-12 h-12 sm:w-16 sm:h-16 relative overflow-hidden rounded-full border">
