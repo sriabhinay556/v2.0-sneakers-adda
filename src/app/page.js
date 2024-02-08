@@ -1,4 +1,3 @@
-
 async function getData() {
   const res = await fetch('https://65c43452dae2304e92e25de9.mockapi.io/TestAPI/v1/users', { next: { revalidate: 10 } })
   // The return value is *not* serialized
@@ -14,5 +13,6 @@ async function getData() {
  
 export default async function Home() {
   const data = await getData()
-  return <main>{JSON.stringify(data)}</main>
+  //return <main>{JSON.stringify(data)}</main>
+  return <>/Home</>
 }
