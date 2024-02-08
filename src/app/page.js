@@ -14,5 +14,9 @@ async function getData() {
 export default async function Home() {
   const data = await getData()
   //return <main>{JSON.stringify(data)}</main>
-  return <>/Home</>
+  return  <div className="flex justify-center items-center p-5">
+  <div className="border border-gray-200 w-full max-w-[1000px] h-[530px] md:w-[1000px] md:h-[530px] lg:h-[620px]">
+    /Home
+  </div>
+</div>
 }
