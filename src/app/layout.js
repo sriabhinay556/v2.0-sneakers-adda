@@ -13,7 +13,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    
       <body className={inter.className}>
         <div className="flex justify-center p-3">
           v2.0 is still developing-
