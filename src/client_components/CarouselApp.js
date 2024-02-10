@@ -19,7 +19,7 @@ function CarouselApp({ images }) {
           centerSlidePercentage={30}
         >
           {images.map((item) => (
-            <div key={index.alt} className="flex flex-col items-center justify-center">
+            <div key={item.alt} className="flex flex-col items-center justify-center">
               <Image src={item.src} alt={item.alt} width={500} height={300} layout="responsive" />
               <p className="text-center font-bold">{item.alt}</p>
             </div>
@@ -31,7 +31,7 @@ function CarouselApp({ images }) {
               <div className='md:hidden overflow-y-auto' style={{ maxHeight: '90vh' }}>
           <div className="flex flex-col items-center justify-center space-y-4">
             {images.map((item) => (
-              <div key={index.alt} className="w-full flex flex-col items-center justify-center px-4">
+              <div key={item.alt} className="w-full flex flex-col items-center justify-center px-4">
                 <Image 
                   src={item.src} 
                   alt={item.alt} 
