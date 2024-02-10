@@ -7,7 +7,7 @@ import Image from 'next/image';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "v2.0-sneakers-adda",
+  title: "v2.0-sneakers-adda", 
 };
 
 export default function RootLayout({ children }) {

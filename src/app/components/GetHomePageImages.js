@@ -1,5 +1,5 @@
 import React from 'react'
-import Carousel_App from '@/client_components/CarouselApp' //client code
+import Carousel_App from '@/app/client_components/CarouselApp' //client code
 import image1 from '../../../public/HomePageImages/image1.jpg'
 import image2 from '../../../public/HomePageImages/image2.jpg'
 import image3 from '../../../public/HomePageImages/image3.jpg'
