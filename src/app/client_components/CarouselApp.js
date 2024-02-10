@@ -9,6 +9,7 @@ function CarouselApp({ images }) {
     <div className="relative w-full h-full">
       {/* Horizontal Carousel (for medium and larger screens) */}
       <div className='hidden md:block'>
+      this is CarouselApp
         <Carousel 
           useKeyboardArrows 
           infiniteLoop 
