@@ -11,11 +11,10 @@ export default function Home() {
           {/* <Suspense fallback={<p>loading...</p>}>
              <ServerComponent/>
           </Suspense> */}
-          <Suspense fallback={<p>loading.....</p>}>
+          <Suspense fallback={<p>loading..</p>}>
             <GetHomePageImages/>
           </Suspense>
-          
-
+    
 
         </div>
       </div>
