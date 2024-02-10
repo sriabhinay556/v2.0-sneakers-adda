@@ -18,8 +18,8 @@ function CarouselApp({ images }) {
           centerMode 
           centerSlidePercentage={30}
         >
-          {images.map((item, index) => (
-            <div key={index} className="flex flex-col items-center justify-center">
+          {images.map((item) => (
+            <div key={index.alt} className="flex flex-col items-center justify-center">
               <Image src={item.src} alt={item.alt} width={500} height={300} layout="responsive" />
               <p className="text-center font-bold">{item.alt}</p>
             </div>
@@ -30,8 +30,8 @@ function CarouselApp({ images }) {
     {/* work on this below code; this code only works for small screens!  */}
               <div className='md:hidden overflow-y-auto' style={{ maxHeight: '90vh' }}>
           <div className="flex flex-col items-center justify-center space-y-4">
-            {images.map((item, index) => (
-              <div key={index} className="w-full flex flex-col items-center justify-center px-4">
+            {images.map((item) => (
+              <div key={index.alt} className="w-full flex flex-col items-center justify-center px-4">
                 <Image 
                   src={item.src} 
                   alt={item.alt} 
