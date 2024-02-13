@@ -1,3 +1,4 @@
+'use server'
 import React from 'react'
 import Carousel_App from '@/app/client_components/CarouselApp' //client code
 
