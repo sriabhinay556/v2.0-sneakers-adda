@@ -1,7 +1,7 @@
-import CarouselApp2 from "./components/CarouselApp2";
-import GetHomePageImages from "./components/GetHomePageImages"; // server code
+
 import { Suspense } from "react";
-import Image from "next/image";
+
+import CarouselApp from "./client_components/CarouselApp";
 export default function Home() {
 
  const allImages = [
@@ -35,12 +35,10 @@ export default function Home() {
       <div className="flex justify-center border border-gray-300 w-full max-w-[1000px] h-[500px] md:w-[1000px] md:h-[400px] lg:h-[420px] md:block sm:hidden overflow-y-auto" >
         <div className="flex justify-center flex-col items-center w-full">
             
-            <GetHomePageImages/>
+            <CarouselApp images={allImages}/>
          
         </div>
       </div>
- 
-     
 
     </div>
   );

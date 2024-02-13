@@ -21,7 +21,7 @@ function CarouselApp({ images }) {
           {images.map((item) => (
             <Link key={item.alt} href={`/sneakers/${item.route}`}>
             <div className="flex flex-col items-center justify-center">
-              <Image src={item.src} alt={item.alt} width={500} height={300} layout="responsive" />
+              <Image src={item.src} alt={item.alt} width={500} height={300} layout="responsive" priority/>
               <p className="text-center font-bold py-10">{item.alt}</p>
             </div>
             </Link>
@@ -30,7 +30,8 @@ function CarouselApp({ images }) {
       </div>
       
     {/* work on this below code; this code only works for small screens!  */}
-              <div className='md:hidden' style={{ maxHeight: '90vh' }}>
+        
+      <div className='md:hidden' style={{ maxHeight: '90vh' }}>
           <div className="flex flex-col items-center justify-center space-y-4">
             {images.map((item) => (
               <Link key={item.alt} href={`/sneakers/${item.route}`}>
@@ -40,7 +41,8 @@ function CarouselApp({ images }) {
                   alt={item.alt} 
                   width={500} 
                   height={300} 
-                  layout="responsive" />
+                  layout="responsive" 
+                  priority/>
                 <p className="text-center font-bold mt-2">{item.alt}</p>
               </div>
               </Link>
