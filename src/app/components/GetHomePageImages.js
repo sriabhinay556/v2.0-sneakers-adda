@@ -9,20 +9,25 @@ async function GetHomePageImages() {
  
  const allImages = [
     {
-      src:image1,
-      alt:'title1'
-    },{
-      src:image2,
-      alt:'title2'
+      src:image5,
+      alt:"All Air Jordan 1",
+      route:'AJ1',
     },{
       src:image3,
-      alt:'title3'
+      alt:"All Air Jordan 3",
+      route:'AJ3',
+    },{
+      src:image1,
+      alt:"All Yeezy 350",
+      route:'Y350',
     },{
       src:image4,
-      alt:'title4'
+      alt:"All Yeezy 700",
+      route:'Y700',
     },{
-      src:image5,
-      alt:'title5'
+      src:image2,
+      alt:"All Air Jordan 7",
+      route:'AJ7',
     },
 
   ]
