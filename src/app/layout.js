@@ -15,11 +15,11 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
           <div className="flex flex-col sm:flex-row items-center justify-center space-x-0 sm:space-x-4 space-y-4 sm:space-y-0 p-4  mt-1">
-            <h1 className="text-center text-3xl sm:text-5xl font-bold text-green-500 uppercase tracking-widest leading-loose" style={{ fontFamily: "'BlackOpsOne', monospace" }}>
+            <h1 className="text-center text-3xl sm:text-5xl sm: font-bold text-green-500 uppercase tracking-widest leading-loose" style={{ fontFamily: "'BlackOpsOne', monospace" }}>
               Sneakers Adda v2.0
             </h1>
           </div>
-
+       
           <div className="flex-grow">{children}</div>
 
           <div className="flex justify-center p-3 text-sm text-center">

@@ -1,12 +1,12 @@
 // 'use client'
 
 // import React from 'react'
-// export default function ClientComponent({usersData}) {
+// export default function ClientComponent({props}) {
 //   return (
 //     <>
 //     <div>
 //     this is client component - {
-//         usersData.map((item) => {
+//         props.map((item) => {
 //             return(
 //                 <p>{item}</p>
 //             )

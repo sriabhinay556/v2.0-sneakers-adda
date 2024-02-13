@@ -30,7 +30,7 @@ export default function Home() {
 ]
  
   return (  
-    <div className="flex justify-center items-center p-5 mt-10">
+    <div className="flex justify-center items-center p-5 mt-3 lg:mt-10">
      
    
       <div className="flex justify-center border border-gray-300 w-full max-w-[1000px] h-[500px] md:w-[1000px] md:h-[400px] lg:h-[420px] md:block sm:hidden overflow-y-auto" >
