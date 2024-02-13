@@ -18,37 +18,34 @@ function CarouselApp({ images }) {
           centerMode 
           centerSlidePercentage={30}
         >
-          {images.map((item) => (
-            <Link key={item.alt} href={`/sneakers/${item.route}`}>
-            <div className="flex flex-col items-center justify-center">
-              <Image src={item.src} alt={item.alt} width={500} height={300} layout="responsive" priority/>
-              <p className="text-center font-bold py-10">{item.alt}</p>
-            </div>
+         {
+          images.map((item) => {
+            return <Link href={`/sneakers/${item.route}`} key={item.alt}>
+              <Image src={item.src}  width={300} height={300} priority></Image>
+              <p className="text-center py-10">{item.alt}</p>
             </Link>
-          ))}
+          })
+        }
         </Carousel>
       </div>
       
     {/* work on this below code; this code only works for small screens!  */}
-        
-      <div className='md:hidden' style={{ maxHeight: '90vh' }}>
-          <div className="flex flex-col items-center justify-center space-y-4">
-            {images.map((item) => (
-              <Link key={item.alt} href={`/sneakers/${item.route}`}>
-              <div className=" flex flex-col items-center justify-center px-4">
-                <Image 
-                  src={item.src} 
-                  alt={item.alt} 
-                  width={500} 
-                  height={300} 
-                  layout="responsive" 
-                  priority/>
-                <p className="text-center font-bold mt-2">{item.alt}</p>
-              </div>
+        <div className='md:hidden' style={{ maxHeight: '90vh' }}>
+            <div className="flex flex-col items-center justify-center space-y-4">
+            
+            {
+              images.map((item) => {
+              return <Link href={`/sneakers/${item.route}`} key={item.alt}>
+                <Image src={item.src}  width={500} height={300} priority></Image>
+                <p className="text-center py-10">{item.alt}</p>
               </Link>
-            ))}
+              })
+              }
+
+
           </div>
         </div>
+     
     </div>
   );
 }
