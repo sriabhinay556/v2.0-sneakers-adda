@@ -23,29 +23,29 @@ async function Page({ params }) {
     const convertToUSD = priceCents => (priceCents / 100).toFixed(2);
   
 
-  return (
-    <div className="text-center">
-            {!sneakersData ? (
-                <p>Loading...</p>
-            ) : (
-                <div className="flex flex-wrap justify-center">
-                    {sneakersData?.response?.results.map(result => (
-                        <Link href={`sneakers/${result.data.id}`} key={result.data.id} className="border border-gray-300 p-2 m-2 text-center w-72 block hover:bg-gray-200  hover:text-black cursor-pointer">
-                           
-                                <h3 className="font-semibold">{result.data.slug}</h3>
-                                <Image src={result.data.image_url} alt={result.data.slug} className="max-w-full max-h-52 mb-2" />
-                                
-                                <p>
-                                    Retail Price: ${convertToUSD(result.data.retail_price_cents)}
-                                </p>
-                                   
 
-                        </Link>
-                    ))}
+
+    // Inside your component
+    return (
+      <div className="text-center">
+        {!sneakersData ? (
+          <p>Loading...</p>
+        ) : (
+          <div className="flex flex-wrap justify-center">
+            {sneakersData?.response?.results.map(result => (
+              <Link href={`sneakers/${result.data.id}`} key={result.data.id} className="border border-gray-300 p-2 m-2 text-center w-72 block hover:bg-gray-200 hover:text-black cursor-pointer">
+                <h3 className="font-semibold">{result.data.slug}</h3>
+                <div className="image-container h-70">
+                  <Image src={result.data.image_url} alt={result.data.slug} layout="responsive" width={300} height={500} />
                 </div>
-            )}
-        </div>
-  );
+                <p>Retail Price: ${convertToUSD(result.data.retail_price_cents)}</p>
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+    
 }
 
 export default Page;
