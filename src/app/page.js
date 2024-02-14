@@ -8,23 +8,23 @@ export default function Home() {
   {
     src:'/HomePageImages/image5.jpg',
     alt:"All Air Jordan 1",
-    route:'AJ1',
+    route:'Jordan1',
   },{
     src:'/HomePageImages/image3.jpg',
     alt:"All Air Jordan 3",
-    route:'AJ3',
+    route:'Jordan3',
   },{
     src:'/HomePageImages/image1.jpg',
     alt:"All Yeezy 350",
-    route:'Y350',
+    route:'Yeezy350',
   },{
     src:'/HomePageImages/image4.jpg',
     alt:"All Yeezy 700",
-    route:'Y700',
+    route:'Yeezy700',
   },{
     src:'/HomePageImages/image2.jpg',
     alt:"All Air Jordan 7",
-    route:'AJ7',
+    route:'Jordan7',
   },
 
 ]

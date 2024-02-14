@@ -21,7 +21,7 @@ function CarouselApp({ images }) {
          {
           images.map((item) => {
             return <Link href={`/sneakers/${item.route}`} key={item.alt}>
-              <Image src={item.src}  width={300} height={300} priority></Image>
+              <Image src={item.src} alt={item.alt} width={300} height={300} priority></Image>
               <p className="text-center py-10">{item.alt}</p>
             </Link>
           })
@@ -36,7 +36,7 @@ function CarouselApp({ images }) {
             {
               images.map((item) => {
               return <Link href={`/sneakers/${item.route}`} key={item.alt}>
-                <Image src={item.src}  width={500} height={300} priority></Image>
+                <Image src={item.src} alt={item.alt} width={500} height={300} priority></Image>
                 <p className="text-center py-10">{item.alt}</p>
               </Link>
               })
