@@ -42,16 +42,5 @@ async function Page({ params }) {
     );
     
 }
-// export async function generateStaticParams(){
-//     const sneakersData = await getAllSneakers();
-//     const sneakers = sneakersData.response.results;
-
-//     return sneakers.map(sneaker => {
-       
-//         return{
-//         sneakerId: sneaker.data.id.toString()
-//         };
-//     });
-// }
 
 export default Page;
