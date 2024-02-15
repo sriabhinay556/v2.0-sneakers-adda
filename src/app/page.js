@@ -28,6 +28,45 @@ export default function Home() {
   },
 
 ]
+
+// const shoe_brands = {
+//   "results": [
+//       "Jordan1",
+//       "Jordan3",
+//       "Yeezy350",
+//       "Yeezy700",
+//       "Jordan7",
+//       "ASICS",
+//       "ADIDAS",
+//       "ALEXANDER MCQUEEN",
+//       "BAIT",
+//       "BALENCIAGA",
+//       "BURBERRY",
+//       "CHANEL",
+//       "COMMON PROJECTS",
+//       "CONVERSE",
+//       "CROCS",
+//       "DIADORA",
+//       "DIOR",
+//       "FENDI",
+//       "GUCCI",
+//       "JORDAN",
+//       "LI-NING",
+//       "LOUIS VUITTON",
+//       "NEW BALANCE",
+//       "NIKE",
+//       "OFF-WHITE",
+//       "PRADA",
+//       "PUMA",
+//       "REEBOK",
+//       "SAINT LAURENT",
+//       "SAUCONY",
+//       "UNDER ARMOUR",
+//       "VANS",
+//       "VERSACE",
+//       "YEEZY"
+//   ]
+// }
  
   return (  
     <div className="flex justify-center items-center p-5 mt-3 lg:mt-10">
