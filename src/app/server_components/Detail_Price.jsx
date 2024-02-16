@@ -8,7 +8,7 @@ async function Detail_Price({props , size}) {
     , {cache:'no-store'});
 
     if (!res.ok) throw new Error('Fetched failed sneaker data');
-    await new Promise(resolve => setTimeout(resolve, 2000));
+   // await new Promise(resolve => setTimeout(resolve, 2000));
 
     const sneakerData = await res.json();
 
