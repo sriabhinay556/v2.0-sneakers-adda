@@ -78,6 +78,7 @@ export default function Home() {
             <CarouselApp images={allImages}/>
                         
         </div>
+        
       </div>
 
       

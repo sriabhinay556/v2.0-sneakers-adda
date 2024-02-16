@@ -2,9 +2,9 @@ import { unstable_noStore } from "next/cache";
 import getAllSneakers from "./getAllSneakers"
 
 async function getSneaker(sneakerId, sneaker_category) {
-    // unstable_noStore();
+    unstable_noStore();
     const res = await fetch(`https://www.goat.com/web-api/v1/product_variants/buy_bar_data?productTemplateId=${sneakerId}&countryCode=US`);
-
+    
     if (!res.ok) throw new Error('Fetched failed sneaker data');
     
     const sneakersData =  getAllSneakers(sneaker_category);
