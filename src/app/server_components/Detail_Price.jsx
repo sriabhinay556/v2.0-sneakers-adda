@@ -1,3 +1,4 @@
+'use server'
 import React from 'react'
 
 async function Detail_Price({props , size}) {
@@ -27,7 +28,7 @@ async function Detail_Price({props , size}) {
         const instantShipPrice = filteredSneaker.instantShipLowestPriceCents.amount / 100;
         return <p>${instantShipPrice}</p>;
       } else {
-        return <p>no price</p>;
+        return <p>no-stock</p>;
       }
       
     
