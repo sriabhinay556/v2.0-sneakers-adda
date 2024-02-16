@@ -16,13 +16,15 @@ function CarouselApp({ images }) {
           showStatus={false} 
           autoPlay 
           centerMode 
-          centerSlidePercentage={30}
+          centerSlidePercentage={35}
         >
          {
           images.map((item) => {
             return <Link href={`/sneakers/${item.route}`} key={item.alt}>
+              <div>
               <Image src={item.src} alt={item.alt} width={300} height={300} priority></Image>
               <p className="text-center py-10 text-white">{item.alt}</p>
+              </div>
             </Link>
           })
         }
