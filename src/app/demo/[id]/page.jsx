@@ -12,7 +12,7 @@ export async function generateStaticParams() {
   }
 
 async function Page({ params }) {
-   // console.log(params)
+   //console.log(params)
     
     return (
       <>
