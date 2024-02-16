@@ -16,11 +16,11 @@ async function Page({ params }) {
     //console.log(params)
     return (
       <div>
-        <h1>this is static title</h1>
+    
         <Suspense fallback={<Skeleton/>}>
           <Sneakers_Page params={params}/>
         </Suspense>
-        <h1>this is static info.</h1>
+        
       </div>
     );
     

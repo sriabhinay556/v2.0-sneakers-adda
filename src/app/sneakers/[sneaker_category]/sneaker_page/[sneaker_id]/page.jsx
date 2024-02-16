@@ -13,16 +13,16 @@ async function page({params}) {
   
     const sneaker_img = sneakersJson.response.results.find(s => s.data.id === params.sneaker_id).data.image_url;
     const sneaker_name = sneakersJson.response.results.find(s => s.data.id === params.sneaker_id).value;
-
+   
     const sizes = Array.from({ length: 7 }, (_, i) => (i + 6).toFixed(1));
     return (
 <>
-    <div>
-        <h1>{sneaker_name}</h1>
-        <Image src={sneaker_img} width={300} height={300} priority></Image>
+    <div >
+        <h1 className='text-white'>{sneaker_name}</h1>
+        <Image src={sneaker_img} width={300} height={300} alt={sneaker_name} priority></Image>
         {
             sizes.map((item)=>{
-                return <div key={item} className='border'>
+                return <div key={item} className='border border-gray-300 text-white hover:bg-gray-200 hover:text-black cursor-pointer'>
                     <p>Size: {item}</p>
                     <p>Instant Ship Price: </p> 
                     <Suspense fallback={<Skeleton/>}>

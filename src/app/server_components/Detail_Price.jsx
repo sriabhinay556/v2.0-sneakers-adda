@@ -5,7 +5,7 @@ async function Detail_Price({props , size}) {
     const shoe_size = parseInt(size);
     
     const res = await fetch(`https://www.goat.com/web-api/v1/product_variants/buy_bar_data?productTemplateId=${sneakerId}&countryCode=US`
-    , {cache:'no-cache'});
+    , {cache:'no-store'});
 
     if (!res.ok) throw new Error('Fetched failed sneaker data');
     await new Promise(resolve => setTimeout(resolve, 2000));

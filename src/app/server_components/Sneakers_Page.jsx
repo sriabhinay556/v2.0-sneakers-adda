@@ -22,12 +22,12 @@ async function Sneakers_Page({params}) {
         ) : (
           <div className="flex flex-wrap justify-center">
             {sneakersData?.response?.results.map(result => (
-              <Link href={`${params}/sneaker_page/${result.data.id}`} key={result.data.id} className="border border-gray-300 p-2 m-2 text-center w-72 block hover:bg-gray-200 hover:text-black cursor-pointer">
+              <Link href={`${params}/sneaker_page/${result.data.id}`} key={result.data.id} className="border border-gray-500 p-2 m-2 text-center w-72 block text-white hover:bg-gray-200 hover:text-black cursor-pointer">
                 
                 <div className="image-container h-70">
                   <Image src={result.data.image_url} alt={result.data.slug} layout="responsive" width={300} height={500} priority/>
                 </div>
-                <h3 className="font-semibold">{result.value}</h3>
+                <h3 className="font-semibold  ">{result.value}</h3>
               
               </Link>
             ))}
