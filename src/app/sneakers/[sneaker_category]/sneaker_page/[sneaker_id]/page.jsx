@@ -18,11 +18,11 @@ async function page({params}) {
     const sizes = Array.from({ length: 7 }, (_, i) => (i + 6).toFixed(1));
     return (
 <>
-    <div >
+    <div>
         <h1 className='text-white'>{sneaker_name}</h1>
         <Image src={sneaker_img} width={300} height={300} alt={sneaker_name} priority></Image>
         working on prices by using partial-prerendering...
-        {/* {
+        {
             sizes.map((item)=>{
                 return <div key={item} className='border border-gray-300 text-white hover:bg-gray-200 hover:text-black cursor-pointer'>
                     <p>Size: {item}</p>
@@ -32,7 +32,7 @@ async function page({params}) {
                     </Suspense>
                 </div>
             })
-        } */}
+        }
     </div>
 </>
 

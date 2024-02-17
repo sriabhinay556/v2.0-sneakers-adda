@@ -1,17 +1,19 @@
 'use server'
 import React from 'react'
+import Proxy_Api from './Proxy_Api';
 
 async function Detail_Price({props , size}) {
     const sneakerId = props
     const shoe_size = parseInt(size);
     
-    const res = await fetch(`https://www.goat.com/web-api/v1/product_variants/buy_bar_data?productTemplateId=${sneakerId}&countryCode=US`
-    , {cache:'no-store'});
+  //   const res = await fetch(`https://www.goat.com/web-api/v1/product_variants/buy_bar_data?productTemplateId=${sneakerId}&countryCode=US`
+  //   , {cache:'no-store'});
 
-    if (!res.ok) throw new Error('Fetched failed sneaker data');
-   // await new Promise(resolve => setTimeout(resolve, 2000));
+  //   if (!res.ok) throw new Error('Fetched failed sneaker data');
+  //  // await new Promise(resolve => setTimeout(resolve, 2000));
 
-    const sneakerData = await res.json();
+  //   const sneakerData = await res.json();
+    const sneakerData = await Proxy_Api(sneakerId);
 
     const filteredSneakerData = sneakerData.filter(sneaker => 
         sneaker.instantShipLowestPriceCents && sneaker.lastSoldPriceCents
