@@ -1,3 +1,4 @@
+'use server'
 import React from 'react'
 
 async function Proxy_Api(sneakerId) {
