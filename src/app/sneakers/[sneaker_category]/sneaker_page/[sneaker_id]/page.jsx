@@ -21,17 +21,18 @@ async function page({params}) {
     <div >
         <h1 className='text-white'>{sneaker_name}</h1>
         <Image src={sneaker_img} width={300} height={300} alt={sneaker_name} priority></Image>
-        {
+        working on prices by using partial-prerendering...
+        {/* {
             sizes.map((item)=>{
                 return <div key={item} className='border border-gray-300 text-white hover:bg-gray-200 hover:text-black cursor-pointer'>
                     <p>Size: {item}</p>
                     <p>Instant Ship Price: </p> 
-                    {/* <Suspense fallback={<Skeleton/>}>
+                    <Suspense fallback={<Skeleton/>}>
                         <Detail_Price props={params.sneaker_id} size={item}/>
-                    </Suspense> */}
+                    </Suspense>
                 </div>
             })
-        }
+        } */}
     </div>
 </>
 
