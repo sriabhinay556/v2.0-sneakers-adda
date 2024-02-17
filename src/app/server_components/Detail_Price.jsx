@@ -13,7 +13,12 @@ async function Detail_Price({ props, size }) {
   //  // await new Promise(resolve => setTimeout(resolve, 2000));
 
   //   const sneakerData = await res.json();
-  const sneakerData = await Proxy_Api(sneakerId);
+  const res = await fetch(`/src/app/api/proxy?sneakerId=${sneakerId}`, { cache: 'no-store' });
+  
+  if (!res.ok) throw new Error('Failed to fetch sneaker data');
+
+  const sneakerData = await res.json();
+  
 
   const filteredSneakerData = sneakerData.filter(sneaker =>
     sneaker.instantShipLowestPriceCents && sneaker.lastSoldPriceCents
