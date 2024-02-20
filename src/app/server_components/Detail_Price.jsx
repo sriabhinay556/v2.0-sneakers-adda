@@ -4,17 +4,17 @@ import React from 'react'
 async function Detail_Price({ props, size }) {
   const sneakerId = props
   const shoe_size = parseInt(size);
-  //   const res = await fetch(`https://www.goat.com/web-api/v1/product_variants/buy_bar_data?productTemplateId=${sneakerId}&countryCode=US`
-  //   , {cache:'no-store'})
+    const res = await fetch(`https://www.goat.com/web-api/v1/product_variants/buy_bar_data?productTemplateId=${sneakerId}&countryCode=US`
+    , {cache:'no-store'})
 
-  //  // if (!res.ok) throw new Error('Fetched failed sneaker data');
-  //  // await new Promise(resolve => setTimeout(resolve, 2000));
+   if (!res.ok) throw new Error('Fetched failed sneaker data');
+   
 
-  //   const sneakerData = await res.json();
+    const sneakerData = await res.json();
     //console.log(sneakerData)
   // Inside your Detail_Price component, adjust the fetch call
-  const res = await fetch(`/proxy/route/?sneakerId=${sneakerId}`);
-  console.log(res)
+  // const res = await fetch(`/proxy/route/?sneakerId=${sneakerId}`);
+  // console.log(res)
 
   const filteredSneakerData = sneakerData.filter(sneaker =>
     sneaker.instantShipLowestPriceCents && sneaker.lastSoldPriceCents
