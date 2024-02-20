@@ -8,17 +8,11 @@ export default function Page({ params }) {
     useEffect(() => {
         const fetchDataFromApi = async () => {
             try {
-                const res = await fetch(`/api/${id}`, {
-                    headers: {
-                        Accept: "application/json",
-                        method: "GET",
-                    },
-                });
+                const res = await fetch(`/api/${id}`);
 
                 if (res.ok) {
                     const jsonData = await res.json();
                     setData(jsonData);
-                    console.log(jsonData);
                 } else {
                     throw new Error('Failed to fetch data');
                 }
