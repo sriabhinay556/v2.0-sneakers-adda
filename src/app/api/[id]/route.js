@@ -10,7 +10,7 @@ export async function GET(request,{params}){
         data = await res.json()
         // const headers = new Headers(request.headers);
         // headers.set('Access-Control-Allow-Origin', '*');
-       console.log("headers: " , headers())
+       //console.log("headers: " , headers())
       
     }
     catch (error) {
