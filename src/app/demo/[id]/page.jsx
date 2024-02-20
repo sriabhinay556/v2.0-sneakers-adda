@@ -13,6 +13,7 @@ export default function Page({ params }) {
                 if (res.ok) {
                     const jsonData = await res.json();
                     setData(jsonData);
+                    console.log(jsonData);
                 } else {
                     throw new Error('Failed to fetch data');
                 }

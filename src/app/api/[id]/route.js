@@ -15,6 +15,6 @@ export async function GET(request,{params}){
         console.log(error)
     }
     // Return the response with CORS headers and JSON data
-    return new NextResponse(JSON.stringify(data));
+    return new NextResponse(JSON.stringify({ prices: data }));
     // return NextResponse.json({msg:'hello'})
 } 
