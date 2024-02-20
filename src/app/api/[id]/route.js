@@ -10,6 +10,12 @@ export async function GET(request,{params}){
         const res = await fetch(`https://www.goat.com/web-api/v1/product_variants/buy_bar_data?productTemplateId=${sneakerId}&countryCode=US`
         ,{cache: "no-store"})
         data = await res.json()
+        if(data.ok){
+            console.log(data)
+        }
+        else{
+            throw new Error('didnt fetch at route.js')
+        }
     }
     catch (error) {
         console.log(error)
