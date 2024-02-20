@@ -1,4 +1,4 @@
-'use server'
+'use client'
 import React from 'react'
 
 async function Detail_Price({ props, size }) {
