@@ -24,13 +24,7 @@ export default function RootLayout({ children }) {
        
           <div className="flex-grow">{children}</div>
 
-          <div className="flex justify-center p-3 text-sm text-center  text-white">
-            v2.0 is still developing- {" "}
-            
-            <Link href="https://sneakers-adda.vercel.app" className="text-blue-500 hover:text-blue-700 underline cursor-pointer">
-              Check out my previous version!
-            </Link>
-          </div>
+         
         </div>
       </body>
     </html>

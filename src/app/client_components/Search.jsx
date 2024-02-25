@@ -15,17 +15,16 @@ function Search() {
         <input 
           type="text" 
           placeholder="Search your favorite" 
-          className="mr-4 py-1 px-2 border border-gray-300 rounded-lg text-sm text-black" 
+          className="mr-4 py-1 px-2 border border-gray-400 rounded-lg text-sm bg-black text-white  focus:outline-none " 
           value={searchValue}
           onChange={handleInputChange}
-
         />
-        <Link href={`/sneakers/${searchValue+' shoes'}`} className="py-1 px-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 text-sm">
-          Search
+        <Link href={`/sneakers/${encodeURIComponent(searchValue)} shoes`}  className="py-1 px-2 bg-gray-700 text-gray-400 rounded-lg text-sm hover:bg-gray-700 hover:bg-gray-300 transition-colors duration-200 ease-in-out">
+          
+        🔍
+
         </Link>
       </div>
-
-     
     </div>
   );
 }
