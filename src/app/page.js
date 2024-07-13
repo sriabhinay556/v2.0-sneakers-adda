@@ -1,10 +1,14 @@
+'use client'
 import Link from "next/link";
 import { Suspense } from "react";
 import Image from "next/image";
 import CarouselApp from "./client_components/CarouselApp";
 import Search from "./client_components/Search";
-export default function Home() {
+import AppBar from "./client_components/AppBar";
 
+
+
+export default function Home() {
  const allImages = [
   {
     src:'/HomePageImages/image5.jpg',
@@ -70,11 +74,9 @@ export default function Home() {
 // }
      
   return (  
+  
     <div>
-      <div className="flex justify-center items-center text-white">
-          <Search/>
-      </div>
-
+      
      <div className="flex justify-center items-center p-5 mt-3 lg:mt-5">
       
       <div className="flex justify-center border border-gray-300 w-full max-w-[1000px] h-[530px] md:w-[1000px] md:h-[400px] lg:h-[470px] md:block sm:hidden overflow-y-auto" >
@@ -87,7 +89,7 @@ export default function Home() {
       </div>
       
     </div>
-   
+       
    </div>
   );
 }
