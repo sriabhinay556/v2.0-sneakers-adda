@@ -10,13 +10,8 @@
     "postinstall": "npm install --legacy-peer-deps"
   },
   "dependencies": {
-    "@headlessui/react": "^2.1.2",
-    "@heroicons/react": "^2.1.5",
+    
     "@supabase/supabase-js": "^2.44.3",
-    "argon2": "^0.40.3",
-    "bcrypt": "^5.1.1",
-    "bcryptjs": "^2.4.3",
-    "headlessui": "^0.0.0",
     "next": "15.0.0-canary.60",
     "next-auth": "^4.24.7",
     "path-to-regexp": "^6.2.1",
