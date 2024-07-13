@@ -94,16 +94,16 @@ function SignUp() {
             setPasswordError("Password must contain at least one lowercase letter");
             return false;
         } 
-        // Check if password contains at least one number
-        else if (!/\d/.test(password)) {
-            setPasswordError("Password must contain at least one number");
-            return false;
-        } 
-        // Check if password contains at least one special character
-        else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
-            setPasswordError("Password must contain at least one special character");
-            return false;
-        } 
+        // // Check if password contains at least one number
+        // else if (!/\d/.test(password)) {
+        //     setPasswordError("Password must contain at least one number");
+        //     return false;
+        // } 
+        // // Check if password contains at least one special character
+        // else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+        //     setPasswordError("Password must contain at least one special character");
+        //     return false;
+        // } 
         else {
             setPasswordError("");
             return true;
