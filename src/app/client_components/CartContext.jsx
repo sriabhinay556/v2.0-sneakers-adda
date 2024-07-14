@@ -16,6 +16,7 @@ const CartProvider = ({ children }) => {
     const getUserData = async () => {
       if (session?.user?.name) {
         const data = await fetchUserData(session.user.name);
+        console.log(data)
         if (data) {
           setCartData({
             itemCount: data.userItemCount || 0,
@@ -41,8 +42,23 @@ const CartProvider = ({ children }) => {
       return updatedData;
     });
   }, [session]);
+
+  const deleteItemToCart = useCallback(async (item) => {
+    setCartData((prevData) => {
+      const updatedItemsData = prevData.itemsData.filter(cartItem => cartItem !== item);
+      const updatedData = {
+        itemCount: prevData.itemCount - 1,
+        itemsData: updatedItemsData,
+      };
+
+      updateUserData(session.user.name, updatedData.itemCount, updatedData.itemsData);
+
+      return updatedData;
+    });
+  }, [session]);
+
   return (
-    <CartContext.Provider value={{ cartData, addItemToCart }}>
+    <CartContext.Provider value={{ cartData, addItemToCart, deleteItemToCart }}>
       {children}
     </CartContext.Provider>
   );
