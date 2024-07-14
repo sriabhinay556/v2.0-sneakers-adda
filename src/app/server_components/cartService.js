@@ -1,5 +1,4 @@
 import { supabase } from "@/lib/supabase";
-import { data } from "autoprefixer";
 
 export const fetchUserData = async (username) => {
   try {
@@ -7,7 +6,7 @@ export const fetchUserData = async (username) => {
       .from('users')
       .select('userItemCount, userItems')
       .eq('username', username)
-      .single(); // Use single to fetch a single row
+      .single(); 
 
     if (error) {
       throw error;

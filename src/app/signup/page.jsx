@@ -1,11 +1,11 @@
 'use client';
 import { supabase } from "@/lib/supabase";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-
+import { useRouter } from "next/navigation";
 function SignUp() {
-
+ 
     const [formData, setFormData] = useState({
         username: '',
         password: ''
@@ -94,11 +94,11 @@ function SignUp() {
             setPasswordError("Password must contain at least one lowercase letter");
             return false;
         } 
-        // // Check if password contains at least one number
-        // else if (!/\d/.test(password)) {
-        //     setPasswordError("Password must contain at least one number");
-        //     return false;
-        // } 
+        // Check if password contains at least one number
+        else if (!/\d/.test(password)) {
+            setPasswordError("Password must contain at least one number");
+            return false;
+        } 
         // // Check if password contains at least one special character
         // else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
         //     setPasswordError("Password must contain at least one special character");
@@ -136,9 +136,16 @@ function SignUp() {
         console.log(data);
         signIn(null, { callbackUrl: '/' });
     };
-
+    const router = useRouter();
     return (
+        <div>
+            <button onClick={()=> router.back()}
+            className="text-gray-600 rounded-md hover:text-gray-200 transition duration-150 ease-in-out lg:mx-20 mt-7 px-5">
+                        ← 
+                        
+            </button>
         <div className="flex flex-col justify-center items-center mt-36">
+            
             <div className="border rounded-md p-2 w-96">
                 <h1 className="text-lg flex justify-center text-green-400">
                     Create a New Account
@@ -204,6 +211,7 @@ function SignUp() {
                 Continue as Guest
                 </button>
             </div> */}
+        </div>
         </div>
     );
 }

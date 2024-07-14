@@ -26,9 +26,9 @@ async function Page({ params }) {
             <Link href="/" className="px-5 py-3 text-gray-400 rounded-md hover:text-gray-200 transition duration-150 ease-in-out">
               ← 
             </Link>
-            <div className="flex justify-center lg:justify-end lg:mx-7 w-full">
+            {/* <div className="flex justify-center lg:justify-end lg:mx-7 w-full">
               <Search />
-            </div>
+            </div> */}
 
           </div>
           <Suspense fallback={<Skeleton />}>

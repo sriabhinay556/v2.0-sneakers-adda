@@ -31,8 +31,8 @@ async function page({ params }) {
                     <Image src={sneaker_img} width={300} height={300} alt={sneaker_name} priority className="mx-auto" />
                     <h1 className="text-4xl font-bold text-white p-5">{sneaker_name}</h1>
             </div>
-            <div className='flex justify-center items-center'>
-                    <p className="text-xl text-white">Retail Price: ${sneaker_price}</p>
+            <div className='flex justify-center'>
+                    <p className="text-xl text-white mr-4">Retail Price: ${sneaker_price}</p>
                     <CartButton props={sneaker_data}></CartButton>
                     
             </div> 
