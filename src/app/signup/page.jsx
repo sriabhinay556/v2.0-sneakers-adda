@@ -5,7 +5,8 @@ import { useState } from "react";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useRouter } from "next/navigation";
 function SignUp() {
- 
+    const session = useSession();
+
     const [formData, setFormData] = useState({
         username: '',
         password: ''
@@ -137,8 +138,11 @@ function SignUp() {
         signIn(null, { callbackUrl: '/' });
     };
     const router = useRouter();
+    if(session.status=="authenticated"){
+        router.push('/');
+    }
     return (
-        <div>
+        (session.status == "unauthenticated") && <div>
             <button onClick={()=> router.back()}
             className="text-gray-600 rounded-md hover:text-gray-200 transition duration-150 ease-in-out lg:mx-20 mt-7 px-5">
                         ← 

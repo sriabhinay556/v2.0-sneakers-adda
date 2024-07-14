@@ -52,7 +52,8 @@ function Page() {
         <h1 className="text-2xl flex ml-4 text-gray-300 md:text-xl md:ml-64">Cart</h1>
         <hr className="border-t border-black md:mx-64 md:border-gray-600 md:my-4" />
       </div>
-      {items.map((item, index) => (
+      {items.length !=0 && 
+      items.map((item, index) => (
         <div key={index} className="m-4 flex flex-col md:ml-16 md:mr-16 sm:ml-4 sm:mr-4 lg:ml-64 lg:mr-64 border p-2 border-gray-600">
           <div className="flex justify-between">
             <div className="flex flex-col justify-center">
@@ -73,12 +74,15 @@ function Page() {
             </div>
           </div>
         </div>
-      ))}
-      
+      ))
+      }
+      {
+        items.length == 0 && <div className="flex justify-center text-gray-300">Your Cart is Empty :(</div>
+      }
       <hr className="border-t border-gray-600 mx-4 md:mx-64 md:my-4" />
-      <div className="pt-1 flex mx-4 md:ml-16 md:mr-16 sm:ml-4 sm:mr-4 lg:ml-64 lg:mr-64 justify-end">
+      {items.length!=0 && <div className="pt-1 flex mx-4 md:ml-16 md:mr-16 sm:ml-4 sm:mr-4 lg:ml-64 lg:mr-64 justify-end">
         <h1 className="text-xl">Total Cart Value: <span className="text-green-400">${totalValue}</span></h1>
-      </div>
+      </div>}
     </div>
   );
 }
