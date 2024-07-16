@@ -40,9 +40,10 @@ function Page() {
     const itemToDelete = items[index];
     const updatedItems = items.filter((_, i) => i !== index);
     setItems(updatedItems);
-    await deleteItemToCart(itemToDelete); // Ensure this updates the context and backend
+    await deleteItemToCart(index); // Ensure this updates the context and backend
   };
-
+  
+  // console.log("items: ", items)
   return (
     <div className="flex flex-col justify-center mt-8">
       <div>

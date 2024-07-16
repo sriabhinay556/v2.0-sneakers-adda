@@ -32,7 +32,7 @@ function AppBar() {
             status == "authenticated" && (
                 <div className='flex'>
                     <div>
-                        <Image width={30} height={30} className="" src={userIcon} priority ></Image>
+                        <Image alt="" width={30} height={30} className="" src={userIcon} priority ></Image>
                     </div>
                     <div className='mt-1'>
                     {username}
